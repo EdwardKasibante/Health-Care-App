@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    tools:showIn="@layout/activity_add_new_patient"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="8dp"
+        android:text="Profile Picture Will be Later"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:layout_gravity="start"
+        tools:ignore="RtlCompat" />
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:layout_marginBottom="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:stateListAnimator="@animator/animator"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="match_parent"
+                    app:civ_border_width="0.5dp"
+                    app:civ_border_color="@color/purple_500"
+                    android:src="@drawable/user"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+
+                    android:stateListAnimator="@animator/animator"
+                    android:gravity="start|end">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/pickImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:tint="@color/purple_500"
+                        android:stateListAnimator="@animator/animator"
+                        android:src="@drawable/ic_baseline_add_a_photo_24"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        app:civ_circle_background_color="@color/white"
+                        android:layout_gravity="bottom|center_horizontal"/>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:ems="10"
+        android:text="Fill the form below to complete your profile"
+        android:gravity="start|center"
+        android:textColor="@color/black"
+        />
+
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/edittext_border_shape"
+        android:drawableStart="@drawable/ic_baseline_person_pin_24"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="First name"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/otherName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/edittext_border_shape"
+        android:drawableStart="@drawable/ic_baseline_person_pin_24"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Last name"
+        android:paddingStart="15dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/edittext_border_shape"
+        android:drawableStart="@drawable/ic_baseline_add_location_alt_24"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Address"
+        android:paddingStart="15dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/dob"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/edittext_border_shape"
+        android:drawableStart="@drawable/ic_baseline_person_pin_24"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:text="Select Date of birth"
+        android:gravity="start|center"
+        android:paddingStart="15dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="match_parent"
+        android:id="@+id/genderSpinner"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/edittext_border_shape"
+        android:drawableStart="@drawable/ic_baseline_person_add_24"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:text="Select Date of birth"
+        android:gravity="start|center"
+        android:paddingStart="15dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"/>
+
+
+    <EditText
+        android:id="@+id/userPhone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/edittext_border_shape"
+        android:drawableStart="@drawable/ic_baseline_local_phone_24"
+        android:drawablePadding="15dp"
+        android:drawableTint="@color/purple_500"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Enter Phone"
+        android:gravity="start|center"
+        android:paddingStart="15dp"
+        android:maxLength="10"
+        android:paddingLeft="10dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        />
+<Button
+    android:layout_width="match_parent"
+    android:text="Save Info"
+    android:id="@+id/save_info"
+    android:layout_height="wrap_content"/>
+</LinearLayout>
